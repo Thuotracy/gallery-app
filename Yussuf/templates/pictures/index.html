@@ -1,0 +1,69 @@
+{%extends 'pictures/base.html'%}
+
+{%block content%}
+{{block.super}}
+<style>
+    .card-columns{
+        background-color: black;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" style="margin-left: 320px;">
+            <span id="locations">
+                {% for location in locations %}
+                <a class="btn btn-primary" id="btn" href="{% url 'location' location.id %}"
+                    style="font-size: 15px;">{{location}}</a>
+                {%endfor%}
+            </span>
+        </div>
+    </div>
+    <br>
+    <hr>
+
+
+
+    <div class="card-columns">
+        {% for image in images %}
+        <div class="card" data-toggle="modal" data-target="#{{image.id}}">
+            <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img" style="margin-bottom: 10%;">
+        </div>
+        <br>
+        <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLong"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content modalcard">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageheader" style="font-size: large;">{{image.title}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body" style="background-color: rgb(21, 24, 23);">
+                        <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
+                        <p class="imgdesc text-center" style="background-color: rgb(230, 123, 36); font-size: x-large;">
+                            {{image.description}}</p>
+                        {% for category in image.categories.all %}
+                        <span class="btn btn-sm btn-outline-info" style="font-size: 15px;">{{category}}</span>
+                        {% endfor %}
+                    </div>
+                    <div class="modal-footer">
+                        <input class="form-control input-lg" type="text" style="font-size: 15px;" value="{{image.image.url}}"
+                            id="{{image.id}}.url">
+                        <button class="btn btn-success btn-sm"  onclick="copyToClipboard('{{image.id}}.url')" style="font-size: 15px;">Copy</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal" style="font-size: 15px;">Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+        {% endfor %}
+    </div>
+
+</div>
+</div>
+
+{% endblock %}
