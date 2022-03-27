@@ -1,9 +1,9 @@
-# Adams~~Gallery
+# Gallery
 
 ## Author
-### [Abdimulhin Adan](https://github.com/AbdimulhinYussuf3675)
+### [Tracy Wangari]
 ## Description
-Adams ~~ Gallery is a picture gallery made with a Django application that allows user to display own photos for others to view.
+Gallery is a picture gallery made with a Django application that allows user to display own photos for others to view.
 
 
 
@@ -14,14 +14,14 @@ Adams ~~ Gallery is a picture gallery made with a Django application that allows
 Clone the the repository by running
 
    ```bash
-   git clone https://github.com/AbdimulhinYussuf3675/Personal-django-gallery.git
+   git clone https://github.com/Thuotracy/gallery-app.git
    ```
  or download a zip file of the project from github
 
 
 Navigate to the project directory
 ```bash
-cd Personal-django-gallery
+cd gallery
 ```
 
 ##### 2. Create a virtual environment
@@ -44,13 +44,13 @@ To activate the virtual environment we just created, run
 ##### 3. Create a django and create django projects
  Install django
  ```bash
- pip install django==1.11
+ pip install django
   ```
   Create django project
   ```bash
   django-admin startproject gallery.
 ```
-create a Yussuf app
+create a tracy app
  ```bash
  django-admin startapp news
  ```
@@ -102,23 +102,12 @@ To run the application on your development machine,
 * Bootstrap3
 * Django-Admin
 
-
-## User stories
->As a user I should be able to:
-
-* View different photos that interest me.
-* Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within      the same route as the main page.
-* Search for different categories of photos. (ie. Travel, Food)
-* View photos based on the location they were taken.
-* Copy a link to the photo to share with my friends.
-
-
 ## Bugs
 There are no known bugs at the moment
 
 ## License
 [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](http://opensource.org/licenses/MIT)
->MIT license &copy;  2021 Abdimulhin
+>MIT license &copy;  2022 Tracy
 
 # Collaboration Information
 * Clone the repository
@@ -127,4 +116,4 @@ There are no known bugs at the moment
 * Create a pull request
 
 # Contacts
-adam.abdimulhi.001@gmail.com
+tracyjacobs775@gmail.com
