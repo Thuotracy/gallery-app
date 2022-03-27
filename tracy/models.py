@@ -44,7 +44,7 @@ class Image(models.Model):
         self.save()
     
     def delete_image():
-        self.delete()
+         self.delete()
 
     @classmethod
     def all_images(cls):

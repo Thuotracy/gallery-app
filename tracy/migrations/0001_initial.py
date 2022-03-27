@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
                 ('locations', models.TextField()),
                 ('title', models.CharField(default='title', max_length=30)),
                 ('image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='image')),
-                ('categories', models.ManyToManyField(to='Yussuf.categories')),
+                ('categories', models.ManyToManyField(to='tracy.categories')),
             ],
         ),
         migrations.CreateModel(
