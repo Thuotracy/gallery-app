@@ -2,7 +2,7 @@ from django.db import models
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-Create your models here.
+# Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length=30)
 
