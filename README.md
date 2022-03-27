@@ -106,7 +106,7 @@ To run the application on your development machine,
 There are no known bugs at the moment
 
 ## License
-[![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](http://opensource.org/licenses/MIT)
+<!-- [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](http://opensource.org/licenses/MIT) -->
 >MIT license &copy;  2022 Tracy
 
 # Collaboration Information
