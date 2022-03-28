@@ -1,8 +1,8 @@
-from django.conf.urls import url
+from django.urls import re_path
 from . import views
 
 urlpatterns=[
-    url('^$',views.gallery,name = 'gallery'),
-    url(r'^location/(\d+)',views.location,name = 'location'),
-    url(r'^search/',views.search,name='search')
+    re_path('^$',views.gallery,name = 'gallery'),
+    re_path(r'^location/(\d+)',views.location,name = 'location'),
+    re_path(r'^search/',views.search,name='search')
 ]
