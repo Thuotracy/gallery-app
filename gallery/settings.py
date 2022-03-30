@@ -15,6 +15,8 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import django_heroku
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,10 +85,13 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'picha',
-        'USER': 'tracy',
-        'PASSWORD': 'wangari',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd38b18f0pbbk38',
+        'USER': 'zhrixnugvxbfqa',
+        'PASSWORD': 'c27a0729a42eeb0c1fea22eb81ffc999c5550690810e26d739300781940fbbd0',
+        'HOST': 'ec2-52-201-124-168.compute-1.amazonaws.com',
+        'PORT': '5432',
+
     }
 }
 
@@ -138,6 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+django_heroku.settings(locals())
 
 cloudinary.config( 
   cloud_name = "adam-gallery", 
